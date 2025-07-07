@@ -3,13 +3,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define DEFAULT 0
-#define MOUSE 1
-#define SCROLL_AND_FUNCTION 2
-#define NUM_AND_SYMBOL 3
-#define SHORTCUT_MAC 4
-#define SHORTCUT_WIN 5
-#define CONFIG 6
+#define DEFAULT_MAC 0
+#define DEFAULT_WIN 1
+#define MOUSE 2
+#define SCROLL_AND_FUNCTION 3
+#define NUM_AND_SYMBOL 4
+#define SHORTCUT_MAC 5
+#define SHORTCUT_WIN 6
+#define CONFIG 7
 
 &mt {
     flavor = "balanced";
@@ -84,10 +85,10 @@
 
         DEFAULT_WIN {
             bindings = <
-&kp TAB                       &trans  &trans  &trans  &trans  &trans                    &trans           &trans  &trans  &trans  &trans  &trans
-&mt LCTRL LEFT_BRACKET        &trans  &trans  &trans  &trans  &trans                    &trans           &trans  &trans  &trans  &trans  &trans
-&mt LEFT_SHIFT RIGHT_BRACKET  &trans  &trans  &trans  &trans  &trans                    &trans           &trans  &trans  &trans  &trans  &trans
-                                      &to 0   &to 1   &trans  &trans  &trans    &trans  &lt 6 RS(SPACE)          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans           &trans  &trans  &trans  &trans  &trans
+                &to 0   &to 1   &trans  &trans  &trans    &trans  &lt 6 RS(SPACE)          &trans
             >;
         };
 
