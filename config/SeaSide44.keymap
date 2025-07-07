@@ -8,7 +8,6 @@
 #define SCRL_DOWN MOVE_Y(-ZMK_POINTING_DEFAULT_SCRL_VAL)
 #define SCRL_LEFT MOVE_X(-ZMK_POINTING_DEFAULT_SCRL_VAL)
 #define SCRL_RIGHT MOVE_X(ZMK_POINTING_DEFAULT_SCRL_VAL)
-
 #define DEFAULT_MAC 0
 #define DEFAULT_WIN 1
 #define MOUSE 2
@@ -100,10 +99,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB3  &trans    &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans
+&trans  &trans  &trans          &msc SCRL_UP    &trans           &trans                    &trans  &trans    &trans    &trans  &trans  &trans
+&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans                    &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans                    &trans  &mkp MB3  &trans    &trans  &trans  &trans
+                &trans          &trans          &trans           &trans  &trans    &trans  &trans            &trans
             >;
         };
 
