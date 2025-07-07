@@ -27,18 +27,18 @@
     combos {
         compatible = "zmk,combos";
 
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <19 20>;
+        };
+
         escape_lang2 {
             bindings = <&escape_lang2>;
             key-positions = <8 9>;
         };
 
-        enter {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <19 20>;
-        };
-
         backspace {
-            bindings = <&kp ENTER>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <20 21>;
         };
     };
