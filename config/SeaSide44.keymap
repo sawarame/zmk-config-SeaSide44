@@ -43,13 +43,6 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-
         escape_lang2: escape_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -59,13 +52,22 @@
     };
 
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
+        mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
-
             #binding-cells = <2>;
+            flavor = "hold-preferred";
             tapping-term-ms = <100>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Mod-Tap";
+        };
+
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <100>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Layer-Tap";
         };
     };
 
