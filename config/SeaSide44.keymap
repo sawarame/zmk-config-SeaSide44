@@ -31,13 +31,13 @@
             key-positions = <20 21>;
         };
 
-        escape_lang2 {
-            bindings = <&escape_lang2>;
-            key-positions = <20 19>;
-        };
-
         backspace {
             bindings = <&kp BACKSPACE>;
+            key-positions = <32 33>;
+        };
+
+        escape {
+            bindings = <&escape_lang2>;
             key-positions = <8 9>;
         };
     };
@@ -58,6 +58,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <100>;
             bindings = <&kp>, <&kp>;
+
             display-name = "Mod-Tap";
         };
 
@@ -67,6 +68,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <100>;
             bindings = <&mo>, <&kp>;
+
             display-name = "Layer-Tap";
         };
     };
@@ -112,10 +114,10 @@
 
         NUM_AND_SYMBOL {
             bindings = <
-&kp GRAVE  &kp N1           &kp N2       &kp N3    &kp N4      &kp N5                         &kp N6         &kp N7         &kp N8        &kp N9    &kp N0    &trans
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp CARET      &kp AMPERSAND  &kp ASTERISK  &kp LPAR  &kp RPAR  &trans
-&trans     &trans           &kp DQT      &kp SQT   &trans      &trans                         &trans         &trans         &trans        &trans    &trans    &trans
-                            &trans       &trans    &trans      &trans       &trans    &trans  &trans                        &trans
+&kp GRAVE  &kp N1           &kp N2       &kp N3    &kp N4      &kp N5                         &kp N6     &kp N7         &kp N8        &kp N9    &kp N0    &trans
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LPAR  &kp RPAR  &trans
+&trans     &trans           &kp DQT      &kp SQT   &trans      &trans                         &trans     &trans         &trans        &trans    &trans    &trans
+                            &trans       &trans    &trans      &trans       &trans    &trans  &trans                    &trans
             >;
         };
 
