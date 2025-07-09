@@ -19,7 +19,7 @@
 };
 
 &lt {
-    flavor = "balanced";
+    flavor = "hold-preferred";
     quick-tap-ms = <200>;
     tapping-term-ms = <180>;
 };
@@ -69,10 +69,10 @@
 
         DEFAULT_MAC {
             bindings = <
-&kp TAB                   &kp Q  &kp W           &kp E           &kp R  &kp T                                             &kp Y  &kp U  &kp I           &kp O            &kp P          &kp EQUAL
-&mt LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F  &kp G                                             &kp H  &kp J  &kp K           &none            &kp SEMICOLON  &mt RCTRL MINUS
-&mt RSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V  &kp B                                             &kp N  &kp M  &mt RGUI COMMA  &mt RALT PERIOD  &kp SLASH      &mt RSHIFT BACKSLASH
-                                 &to 0           &to 1           &none  &none  &mt LSHIFT LANG2    &mt RIGHT_SHIFT LANG1  &none         &mo 7
+&kp TAB                   &kp Q  &kp W           &kp E           &kp R        &kp T                                                   &kp Y            &kp U  &kp I           &kp O            &kp P          &kp EQUAL
+&mt LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F        &kp G                                                   &kp H            &kp J  &kp K           &none            &kp SEMICOLON  &mt RCTRL MINUS
+&mt RSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V        &kp B                                                   &kp N            &kp M  &mt RGUI COMMA  &mt RALT PERIOD  &kp SLASH      &mt RSHIFT BACKSLASH
+                                 &to 0           &to 1           &lt 3 LANG5  &lt 4 SPACE  &mt LSHIFT LANG2    &mt RIGHT_SHIFT LANG1  &lt 5 LS(SPACE)         &mo 7
             >;
         };
 
@@ -81,7 +81,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &to 0   &to 1   &trans  &trans  &trans    &trans  &none           &trans
+                &to 0   &to 1   &trans  &trans  &trans    &trans  &trans          &trans
             >;
         };
 
