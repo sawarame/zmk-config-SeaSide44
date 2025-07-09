@@ -56,7 +56,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <180>;
             bindings = <&kp>, <&kp>;
 
             display-name = "Mod-Tap";
@@ -66,7 +66,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <180>;
             bindings = <&mo>, <&kp>;
 
             display-name = "Layer-Tap";
