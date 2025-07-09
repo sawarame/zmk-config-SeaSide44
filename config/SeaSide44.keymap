@@ -28,17 +28,22 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <20 21>;
+            key-positions = <20 19>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <32 33>;
+            key-positions = <21 20>;
         };
 
         escape {
             bindings = <&escape_lang2>;
             key-positions = <8 9>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <33 32>;
         };
     };
 
