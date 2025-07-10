@@ -33,14 +33,9 @@
             key-positions = <20 19>;
         };
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <21 20>;
-        };
-
         escape {
             bindings = <&escape_lang2>;
-            key-positions = <8 9>;
+            key-positions = <16 15>;
         };
     };
 
@@ -73,7 +68,7 @@
 &kp TAB                   &kp Q  &kp W           &kp E           &kp R        &kp T                                                   &kp Y            &kp U  &kp I                  &kp O            &kp P          &kp EQUAL
 &mt LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F        &kp G                                                   &kp H            &kp J  &kp K                  &lt 2 L          &kp SEMICOLON  &mt RCTRL MINUS
 &mt RSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V        &kp B                                                   &kp N            &kp M  &mthp RIGHT_GUI COMMA  &mt RALT PERIOD  &kp SLASH      &mt RSHIFT BACKSLASH
-                                 &to 0           &to 1           &lt 3 LANG5  &lt 4 SPACE  &mt LSHIFT LANG2    &mt RIGHT_SHIFT LANG1  &lt 5 LS(SPACE)         &mo 7
+                                 &to 0           &to 1           &lt 3 LANG5  &lt 4 SPACE  &mt LSHIFT LANG2    &mt RIGHT_SHIFT LANG1  &lt 5 BACKSPACE         &mo 7
             >;
         };
 
