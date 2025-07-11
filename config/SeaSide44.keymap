@@ -25,7 +25,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <19 20>;
+        };
+    };
 
     macros {
         escape_lang2: escape_lang2 {
@@ -57,6 +64,16 @@
             flavor = "hold-preferred";
             quick-tap-ms = <200>;
         };
+
+        lthp: lthp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTHP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -65,7 +82,7 @@
         DEFAULT_MAC {
             bindings = <
 &kp TAB                     &kp Q  &kp W           &kp E           &kp R            &kp T                                                            &kp Y        &kp U  &kp I                  &kp O            &kp P          &kp EQUAL
-&mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F            &kp G                                                            &kp H        &kp J  &kp K                  &lt 2 L          &kp SEMICOLON  &mthp RCTRL MINUS
+&mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F            &kp G                                                            &kp H        &kp J  &kp K                  &lthp 2 L        &kp SEMICOLON  &mthp RCTRL MINUS
 &mthp RSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V            &kp B                                                            &kp N        &kp M  &mthp RIGHT_GUI COMMA  &mt RALT PERIOD  &kp SLASH      &mthp RSHIFT BACKSLASH
                                    &to 0           &to 1           &lt 3 LC(SPACE)  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 5 ENTER         &mo 7
             >;
