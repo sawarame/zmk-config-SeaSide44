@@ -25,19 +25,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <20 19>;
-        };
-
-        escape {
-            bindings = <&escape_lang2>;
-            key-positions = <16 15>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         escape_lang2: escape_lang2 {
@@ -58,6 +46,17 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <200>;
         };
+
+        lt_escape: lt_escape {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_ESCAPE";
+            bindings = <&mo>, <&escape_lang2>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -65,10 +64,10 @@
 
         DEFAULT_MAC {
             bindings = <
-&kp TAB                     &kp Q  &kp W           &kp E           &kp R        &kp T                                                       &kp Y            &kp U  &kp I                  &kp O            &kp P          &kp EQUAL
-&mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F        &kp G                                                       &kp H            &kp J  &kp K                  &lt 2 L          &kp SEMICOLON  &mthp RCTRL MINUS
-&mthp RSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V        &kp B                                                       &kp N            &kp M  &mthp RIGHT_GUI COMMA  &mt RALT PERIOD  &kp SLASH      &mthp RSHIFT BACKSLASH
-                                   &to 0           &to 1           &lt 3 LANG5  &lt 4 SPACE  &mthp LSHIFT LANG2    &mthp RIGHT_SHIFT LANG1  &lt 5 BACKSPACE         &mo 7
+&kp TAB                     &kp Q  &kp W           &kp E           &kp R        &kp T                                                              &kp Y        &kp U  &kp I                  &kp O            &kp P          &kp EQUAL
+&mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F        &kp G                                                              &kp H        &kp J  &kp K                  &lt 2 L          &kp SEMICOLON  &mthp RCTRL MINUS
+&mthp RSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V        &kp B                                                              &kp N        &kp M  &mthp RIGHT_GUI COMMA  &mt RALT PERIOD  &kp SLASH      &mthp RSHIFT BACKSLASH
+                                   &to 0           &to 1           &lt 3 LANG5  &lt_escape 4 0  &mthp LSHIFT LANG2    &mthp RIGHT_SHIFT BACKSPACE  &lt 5 ENTER         &mo 7
             >;
         };
 
