@@ -73,10 +73,10 @@
 
         DEFAULT_WIN {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &to 0   &to 1   &trans  &trans  &trans    &trans  &trans          &trans
+&trans  &trans  &trans  &trans  &trans            &trans                    &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans                    &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans                    &trans       &trans  &trans  &trans  &trans  &trans
+                &to 0   &to 1   &lt 3 LANGUAGE_5  &trans  &trans    &trans  &lt 6 ENTER          &trans
             >;
         };
 
