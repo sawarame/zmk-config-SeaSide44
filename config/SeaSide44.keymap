@@ -120,7 +120,7 @@
         SCROLL_AND_FUNCTION {
             bindings = <
 &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6          &kp F7          &kp F8        &kp F9             &kp F10          &trans
-&trans  &kp F11  &kp F12  &trans  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW    &trans           &trans
+&trans  &kp F11  &kp F12  &trans  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &lt 2 RIGHT_ARROW  &trans           &trans
 &trans  &trans   &trans   &trans  &trans  &trans                    &trans          &kp C_BRI_DN    &kp C_BRI_UP  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans
                  &trans   &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
@@ -128,9 +128,9 @@
 
         NUM_AND_SYMBOL {
             bindings = <
-&kp GRAVE  &kp N1           &kp N2       &kp N3    &kp N4      &kp N5                         &kp N6     &kp N7         &kp N8        &kp N9    &kp N0    &trans
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LPAR  &kp RPAR  &trans
-&trans     &trans           &kp DQT      &kp SQT   &trans      &trans                         &trans     &trans         &trans        &trans    &trans    &trans
+&kp GRAVE  &kp N1           &kp N2       &kp N3    &kp N4      &kp N5                         &kp N6     &kp N7         &kp N8        &kp N9    &kp N0    &kp DOUBLE_QUOTES
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LPAR  &kp RPAR  &kp SINGLE_QUOTE
+&trans     &trans           &trans       &trans    &trans      &trans                         &trans     &trans         &trans        &trans    &trans    &trans
                             &trans       &trans    &trans      &trans       &trans    &trans  &trans                    &trans
             >;
         };
