@@ -92,6 +92,14 @@
     };
 
     behaviors {
+        shft: shifted_key {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFTED_KEY";
+            #binding-cells = <2>;
+            tapping-term-ms = <0>;
+            bindings = <&kp>, <&kp>;
+        };
+
         mthp: mthp {
             compatible = "zmk,behavior-hold-tap";
             label = "MTHP";
@@ -112,6 +120,15 @@
             flavor = "hold-preferred";
             quick-tap-ms = <200>;
         };
+    };
+
+    keycodes  {
+        compatible = "zmk,keycodes";
+
+        JIS_YEN: jis_qmark {
+            bindings = <&shft 0x89 LS(0x89)>;
+        };
+
     };
 
     keymap {
