@@ -11,7 +11,8 @@
 #define NUM_AND_SYMBOL_JIS 5
 #define SHORTCUT_MAC 6
 #define SHORTCUT_WIN 7
-#define CONFIG 8
+#define SHIFT_WIN 8
+#define CONFIG 9
 
 // OS設定を日本語キーボードのまま使用するための変換定義
 #define JIS_EQUAL        UNDER             // =
@@ -93,14 +94,6 @@
     };
 
     behaviors {
-        shft: shft {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHFT";
-            #binding-cells = <2>;
-            tapping-term-ms = <0>;
-            bindings = <&kp>, <&kp>;
-        };
-
         mthp: mthp {
             compatible = "zmk,behavior-hold-tap";
             label = "MTHP";
@@ -121,20 +114,20 @@
             flavor = "hold-preferred";
             quick-tap-ms = <200>;
         };
-    };
 
-    keycodes {
-        compatible = "zmk,keycodes";
-        #binding-cells = <0>;
+        lt_escape: lt_escape {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_ESCAPE";
+            bindings = <&to>, <&escape_lang2>;
 
-        // カスタムキーコードの定義
-        // &shft <通常時のキー> <シフト時のキー>
-
-        // JISキーボード用「;」 → 通常時「;」、シフト時「:」
-        JIS_SEMICOLON: jis_semicolon {
-            bindings = <&shft SEMICOLON JIS_COLON>;
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <200>;
         };
+
     };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -143,16 +136,16 @@
 &kp TAB                     &kp Q  &kp W           &kp E           &kp R            &kp T                                                            &kp Y        &kp U  &kp I                  &kp O            &kp P          &kp EQUAL
 &mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F            &kp G                                                            &kp H        &kp J  &kp K                  &lt 2 L          &kp SEMICOLON  &mthp RCTRL MINUS
 &mthp RSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V            &kp B                                                            &kp N        &kp M  &mthp RIGHT_GUI COMMA  &mt RALT PERIOD  &kp SLASH      &mthp RSHIFT BACKSLASH
-                                   &to 0           &to 1           &lt 3 LC(SPACE)  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 6 ENTER         &mo 8
+                                   &to 0           &to 1           &lt 3 LC(SPACE)  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 6 ENTER         &mo 9
             >;
         };
 
         DEFAULT_WIN {
             bindings = <
-&trans                         &trans  &trans  &trans        &trans            &trans                         &trans       &trans  &trans            &trans  &trans          &shft JIS_EQUAL JIS_PLUS
-&shft JIS_LBRACKET JIS_LBRACE  &trans  &trans  &trans        &trans            &trans                         &trans       &trans  &trans            &trans  &JIS_SEMICOLON  &shft MINUS JIS_UNDERSCORE
-&shft JIS_RBRACKET JIS_RBRACE  &trans  &trans  &mt LCTRL C   &trans            &trans                         &trans       &trans  &mt LCTRL COMMA   &trans  &trans          &shft JIS_YEN JIS_PIPE
-                                       &trans  &trans        &lt 3 JIS_HANZEN  &lt 5 SPACE  &trans    &trans  &lt 7 ENTER          &trans
+&kp TAB                   &kp Q  &kp W           &kp E        &kp R             &kp T                                                            &kp Y        &kp U  &kp I              &kp O            &kp P          &kp JIS_EQUAL
+&mthp LCTRL JIS_LBRACKET  &kp A  &kp S           &kp D        &kp F             &kp G                                                            &kp H        &kp J  &kp K              &lt 2 L          &kp SEMICOLON  &mthp RCTRL MINUS
+&lt 8 JIS_RBRACKET        &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &kp V             &kp B                                                            &kp N        &kp M  &mthp RCTRL COMMA  &mt RALT PERIOD  &kp SLASH      &lt 8 JIS_YEN
+                                 &to 0           &to 1        &lt 3 JIS_HANZEN  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 7 ENTER         &mo 9
             >;
         };
 
@@ -204,9 +197,18 @@
         SHORTCUT_WIN {
             bindings = <
 &trans  &trans  &trans  &trans  &kp LA(F4)  &trans                   &trans  &trans  &trans                  &trans                   &trans  &trans
-&trans  &trans  &trans  &trans  &trans      &trans                   &trans  &trans  &kp LC(TAB)             &kp LS(LC(TAB))          &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans                   &trans  &trans  &kp LA(TAB)             &kp LA(LC(TAB))          &trans  &trans
 &trans  &trans  &trans  &trans  &trans      &trans                   &trans  &trans  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans  &trans
                 &trans  &trans  &trans     &trans  &trans    &trans  &trans          &trans
+            >;
+        };
+        
+        SHIFT_WIN {
+            bindings = <
+&kp TAB         &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)   &kp LS(T)                      &kp RS(Y)  &kp RS(U)  &kp RS(I)  &kp RS(O)  &kp RS(P)      &kp JIS_PLUS
+&kp JIS_LBRACE  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)   &kp LS(G)                      &kp RS(H)  &kp RS(J)  &kp RS(K)  &kp RS(L)  &kp JIS_COLON  &kp JIS_UNDERSCORE
+&kp JIS_RBRACE  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)   &kp LS(B)                      &kp RS(N)  &kp RS(M)  &kp LT     &kp GT     &kp QUESTION   &kp JIS_PIPE
+                           &trans     &trans     &trans      &trans       &trans    &trans  &trans                &trans
             >;
         };
 
