@@ -160,9 +160,9 @@
 
         SCROLL_AND_FUNCTION {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6          &kp F7          &kp F8        &kp F9             &kp F10          &trans
-&trans  &kp F11  &kp F12  &trans  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &lt 2 RIGHT_ARROW  &trans           &trans
-&trans  &trans   &trans   &trans  &trans  &trans                    &trans          &kp C_BRI_DN    &kp C_BRI_UP  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans
+&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6          &kp F7          &kp F8             &kp F9             &kp F10   &trans
+&trans  &kp F11  &kp F12  &trans  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &lt 2 RIGHT_ARROW  &trans   &trans
+&trans  &trans   &trans   &trans  &trans  &trans                    &kp C_BRI_DN    &kp C_BRI_UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &trans   &trans
                  &trans   &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
         };
@@ -178,10 +178,10 @@
 
         NUM_AND_SYMBOL_JIS {
             bindings = <
-&kp JIS_BACKQUOTE  &kp N1           &kp N2      &kp N3        &kp N4      &kp N5                         &kp N6      &kp N7             &kp N8            &kp N9        &kp N0        &kp JIS_DQUOTE
-&kp JIS_TILDE      &kp EXCLAMATION  &kp JIS_AT  &kp HASH      &kp DOLLAR  &kp PERCENT                    &kp JIS_AT  &kp JIS_AMPERSAND  &kp JIS_ASTERISK  &kp JIS_LPAR  &kp JIS_RPAR  &kp JIS_QUOTE
-&trans             &trans           &trans      &kp LEFT_WIN  &trans      &trans                         &trans      &trans             &kp RIGHT_WIN     &trans        &trans        &trans
-                                    &trans      &trans        &trans      &trans       &trans    &trans  &trans                         &trans
+&kp JIS_BACKQUOTE  &kp N1           &kp N2      &kp N3    &kp N4      &kp N5                         &kp N6      &kp N7             &kp N8            &kp N9        &kp N0        &kp JIS_DQUOTE
+&kp JIS_TILDE      &kp EXCLAMATION  &kp JIS_AT  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp JIS_AT  &kp JIS_AMPERSAND  &kp JIS_ASTERISK  &kp JIS_LPAR  &kp JIS_RPAR  &kp JIS_QUOTE
+&trans             &trans           &trans      &trans    &trans      &trans                         &trans      &trans             &trans            &trans        &trans        &trans
+                                    &trans      &trans    &trans      &trans       &trans    &trans  &trans                         &trans
             >;
         };
 
