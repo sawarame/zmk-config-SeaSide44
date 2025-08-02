@@ -145,9 +145,10 @@
 
         DEFAULT_WIN {
             bindings = <
-&trans  &trans  &trans  &trans              &trans       &trans                         &trans       &trans  &trans                   &trans  &trans  &trans
-&trans  &trans  &trans  &trans              &trans       &trans                         &trans       &trans  &trans                   &trans  &trans  &trans
-                &trans  &trans              &lt 3 GRAVE  &lt 5 SPACE  &trans    &trans  &lt 7 ENTER          &trans
+&trans  &trans  &trans  &trans        &trans       &trans                         &trans       &trans  &trans            &trans  &trans  &trans
+&trans  &trans  &trans  &trans        &trans       &trans                         &trans       &trans  &trans            &trans  &trans  &trans
+&trans  &trans  &trans  &mt LCTRL C   &trans       &trans                         &trans       &trans  &mt LCTRL COMMA   &trans  &trans  &shft JP_YEN JP_PIPE
+                &trans  &trans        &lt 3 GRAVE  &lt 5 SPACE  &trans    &trans  &lt 7 ENTER          &trans
             >;
         };
 
