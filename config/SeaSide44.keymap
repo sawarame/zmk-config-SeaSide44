@@ -92,6 +92,14 @@
     };
 
     behaviors {
+        shft: shft {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <0>;
+            bindings = <&kp>, <&kp>;
+        };
+
         mthp: mthp {
             compatible = "zmk,behavior-hold-tap";
             label = "MTHP";
@@ -114,6 +122,15 @@
         };
     };
 
+    keycodes  {
+        compatible = "zmk,keycodes";
+
+        JIS_YEN: jis_yen {
+            bindings = <&shft 0x89 LS(0x89)>;
+        };
+
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -130,7 +147,6 @@
             bindings = <
 &trans  &trans  &trans  &trans              &trans       &trans                         &trans       &trans  &trans                   &trans  &trans  &trans
 &trans  &trans  &trans  &trans              &trans       &trans                         &trans       &trans  &trans                   &trans  &trans  &trans
-&trans  &trans  &trans  &mt LEFT_CONTROL C  &trans       &trans                         &trans       &trans  &mt RIGHT_CONTROL COMMA  &trans  &trans  &JIS_YEN
                 &trans  &trans              &lt 3 GRAVE  &lt 5 SPACE  &trans    &trans  &lt 7 ENTER          &trans
             >;
         };
