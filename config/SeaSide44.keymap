@@ -123,6 +123,18 @@
         };
     };
 
+    keycodes {
+        compatible = "zmk,keycodes";
+        #binding-cells = <0>;
+
+        // カスタムキーコードの定義
+        // &shft <通常時のキー> <シフト時のキー>
+
+        // JISキーボード用「;」 → 通常時「;」、シフト時「:」
+        JIS_SEMICOLON: jis_semicolon {
+            bindings = <&shft SEMICOLON JIS_COLON>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -137,9 +149,9 @@
 
         DEFAULT_WIN {
             bindings = <
-&trans                         &trans  &trans  &trans        &trans            &trans                         &trans       &trans  &trans            &trans  &trans                     &shft JIS_EQUAL JIS_PLUS
-&shft JIS_LBRACKET JIS_LBRACE  &trans  &trans  &trans        &trans            &trans                         &trans       &trans  &trans            &trans  &shft SEMICOLON JIS_COLON  &shft MINUS JIS_UNDERSCORE
-&shft JIS_RBRACKET JIS_RBRACE  &trans  &trans  &mt LCTRL C   &trans            &trans                         &trans       &trans  &mt LCTRL COMMA   &trans  &trans                     &shft JIS_YEN JIS_PIPE
+&trans                         &trans  &trans  &trans        &trans            &trans                         &trans       &trans  &trans            &trans  &trans          &shft JIS_EQUAL JIS_PLUS
+&shft JIS_LBRACKET JIS_LBRACE  &trans  &trans  &trans        &trans            &trans                         &trans       &trans  &trans            &trans  &JIS_SEMICOLON  &shft MINUS JIS_UNDERSCORE
+&shft JIS_RBRACKET JIS_RBRACE  &trans  &trans  &mt LCTRL C   &trans            &trans                         &trans       &trans  &mt LCTRL COMMA   &trans  &trans          &shft JIS_YEN JIS_PIPE
                                        &trans  &trans        &lt 3 JIS_HANZEN  &lt 5 SPACE  &trans    &trans  &lt 7 ENTER          &trans
             >;
         };
