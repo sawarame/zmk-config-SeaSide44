@@ -196,10 +196,10 @@
 
         SHORTCUT_WIN {
             bindings = <
-&trans  &trans  &trans  &trans  &kp LA(F4)  &trans                    &trans  &trans       &kp LG(PRINTSCREEN)     &kp LG(LS(S))            &trans  &trans
-&trans  &trans  &trans  &trans  &trans      &trans                    &trans  &trans       &kp LS(LC(TAB))         &kp LC(TAB)              &trans  &trans
-&trans  &trans  &trans  &trans  &trans      &trans                    &trans  &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans  &trans
-                &trans  &trans  &trans      &trans  &trans    &trans  &trans               &trans
+&trans  &trans  &trans  &kp DELETE  &kp LA(F4)  &trans                    &trans  &trans       &kp LG(PRINTSCREEN)     &kp LG(LS(S))            &trans  &trans
+&trans  &trans  &trans  &trans      &trans      &trans                    &trans  &trans       &kp LS(LC(TAB))         &kp LC(TAB)              &trans  &trans
+&trans  &trans  &trans  &trans      &trans      &trans                    &trans  &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans  &trans
+                &trans  &trans      &trans      &trans  &trans    &trans  &trans               &trans
             >;
         };
         
