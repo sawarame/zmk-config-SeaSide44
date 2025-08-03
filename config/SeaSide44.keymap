@@ -142,10 +142,10 @@
 
         DEFAULT_WIN {
             bindings = <
-&kp TAB                   &kp Q  &kp W           &kp E        &kp R             &kp T                                                            &kp Y        &kp U  &kp I              &kp O            &kp P          &kp JIS_EQUAL
-&mthp LCTRL JIS_LBRACKET  &kp A  &kp S           &kp D        &kp F             &kp G                                                            &kp H        &kp J  &kp K              &lt 2 L          &kp SEMICOLON  &mthp RCTRL MINUS
-&lt 8 JIS_RBRACKET        &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &kp V             &kp B                                                            &kp N        &kp M  &mthp RCTRL COMMA  &mt RALT PERIOD  &kp SLASH      &lt 8 JIS_YEN
-                                 &to 0           &to 1        &lt 3 JIS_HANZEN  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 7 ENTER         &mo 9
+&kp TAB                   &kp Q  &kp W           &kp E        &kp R             &kp T                                                            &kp Y        &kp U            &kp I              &kp O            &kp P          &kp JIS_EQUAL
+&mthp LCTRL JIS_LBRACKET  &kp A  &kp S           &kp D        &kp F             &kp G                                                            &kp H        &kp J            &kp K              &lt 2 L          &kp SEMICOLON  &mthp RCTRL MINUS
+&lt 8 JIS_RBRACKET        &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &mt LEFT_WIN V    &kp B                                                            &kp N        &mt RIGHT_WIN M  &mthp RCTRL COMMA  &mt RALT PERIOD  &kp SLASH      &lt 8 JIS_YEN
+                                 &to 0           &to 1        &lt 3 JIS_HANZEN  &lt 5 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 7 ENTER                   &mo 9
             >;
         };
 
@@ -196,8 +196,8 @@
 
         SHORTCUT_WIN {
             bindings = <
-&trans  &trans  &trans  &trans  &kp LA(F4)  &trans                   &trans  &trans  &trans                  &trans                   &trans  &trans
-&trans  &trans  &trans  &trans  &trans      &trans                   &trans  &trans  &kp LA(TAB)             &kp LA(LC(TAB))          &trans  &trans
+&trans  &trans  &trans  &trans  &kp LA(F4)  &trans                   &trans  &trans  &kp LG(PRINTSCREEN)     &kp LG(LS(S))            &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans                   &trans  &trans  &kp LC(TAB)             &kp LS(LC(TAB))          &trans  &trans
 &trans  &trans  &trans  &trans  &trans      &trans                   &trans  &trans  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans  &trans
                 &trans  &trans  &trans     &trans  &trans    &trans  &trans          &trans
             >;
