@@ -74,21 +74,21 @@
         bt_0: bt_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &bt BT_DISC 1 &bt BT_DISC 2>;
+            bindings = <&bt BT_SEL 0 &bt BT_DISC 1 &bt BT_DISC 2 &to 0>;
             label = "BT_0";
         };
 
         bt_1: bt_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &bt BT_DISC 0 &bt BT_DISC 2>;
+            bindings = <&bt BT_SEL 1 &bt BT_DISC 0 &bt BT_DISC 2 &to 0>;
             label = "BT_1";
         };
 
         bt_2: bt_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &bt BT_DISC 0 &bt BT_DISC 1>;
+            bindings = <&bt BT_SEL 2 &bt BT_DISC 0 &bt BT_DISC 1 &to 1>;
             label = "BT_2";
         };
     };
@@ -196,10 +196,10 @@
 
         SHORTCUT_WIN {
             bindings = <
-&trans  &trans  &trans  &trans  &kp LA(F4)  &trans                   &trans  &trans  &kp LG(PRINTSCREEN)     &kp LG(LS(S))            &trans  &trans
-&trans  &trans  &trans  &trans  &trans      &trans                   &trans  &trans  &kp LC(TAB)             &kp LS(LC(TAB))          &trans  &trans
-&trans  &trans  &trans  &trans  &trans      &trans                   &trans  &trans  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans  &trans
-                &trans  &trans  &trans     &trans  &trans    &trans  &trans          &trans
+&trans  &trans  &trans  &trans  &kp LA(F4)  &trans                    &trans  &trans       &kp LG(PRINTSCREEN)     &kp LG(LS(S))            &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans                    &trans  &trans       &kp LS(LC(TAB))         &kp LC(TAB)              &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans                    &trans  &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans  &trans
+                &trans  &trans  &trans      &trans  &trans    &trans  &trans               &trans
             >;
         };
         
