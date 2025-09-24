@@ -178,10 +178,10 @@
 
         NUM_AND_SYMBOL_JIS {
             bindings = <
-&kp JIS_BACKQUOTE  &kp N1           &kp N2      &kp N3    &kp N4      &kp N5                         &kp N6      &kp N7             &kp N8            &kp N9        &kp N0        &kp JIS_DQUOTE
-&kp JIS_TILDE      &kp EXCLAMATION  &kp JIS_AT  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp JIS_AT  &kp JIS_AMPERSAND  &kp JIS_ASTERISK  &kp JIS_LPAR  &kp JIS_RPAR  &kp JIS_QUOTE
-&trans             &trans           &trans      &trans    &trans      &trans                         &trans      &trans             &trans            &trans        &trans        &trans
-                                    &trans      &trans    &trans      &trans       &trans    &trans  &trans                         &trans
+&kp JIS_BACKQUOTE  &kp N1           &kp N2      &kp N3    &kp N4      &kp N5                         &kp N6         &kp N7             &kp N8            &kp N9        &kp N0        &kp JIS_DQUOTE
+&kp JIS_TILDE      &kp EXCLAMATION  &kp JIS_AT  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp JIS_CARET  &kp JIS_AMPERSAND  &kp JIS_ASTERISK  &kp JIS_LPAR  &kp JIS_RPAR  &kp JIS_QUOTE
+&trans             &trans           &trans      &trans    &trans      &trans                         &trans         &trans             &trans            &trans        &trans        &trans
+                                    &trans      &trans    &trans      &trans       &trans    &trans  &trans                            &trans
             >;
         };
 
