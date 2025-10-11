@@ -114,8 +114,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
+            flavor = "hold-preferred";
             tapping-term-ms = <180>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <180>;
         };
 
         mt_escape: mt_escape {
@@ -124,8 +125,8 @@
             bindings = <&kp>, <&escape_lang2>;
 
             #binding-cells = <2>;
+            flavor = "balanced";
             tapping-term-ms = <180>;
-            flavor = "hold-preferred";
             quick-tap-ms = <200>;
         };
     };
