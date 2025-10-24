@@ -156,7 +156,7 @@
             bindings = <
 &trans      &trans  &trans           &msc SCRL_DOWN  &trans          &trans                    &trans  &trans    &trans    &trans  &trans  &trans
 &kp LCTRL   &trans  &msc SCRL_RIGHT  &msc SCRL_UP    &msc SCRL_LEFT  &trans                    &trans  &mkp MB1  &mkp MB2  &trans  &trans  &kp RCTRL
-&kp LSHIFT  &trans  &trans           &trans          &trans          &trans                    &trans  &mkp MB3  &trans    &trans  &trans  &kp RSHIFTß
+&kp LSHIFT  &trans  &trans           &trans          &trans          &trans                    &trans  &mkp MB3  &trans    &trans  &trans  &kp RSHIFT
                     &trans           &trans          &trans          &trans  &trans    &trans  &trans            &trans
             >;
         };
