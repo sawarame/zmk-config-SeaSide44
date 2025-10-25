@@ -191,7 +191,7 @@
         SHORTCUT_MAC {
             bindings = <
 &trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)          &kp LG(N4)            &kp LG(N5)                                  &trans  &trans                &kp LG(MINUS)             &kp LG(LS(EQUAL))          &trans  &trans
-&trans  &trans      &trans      &kp LG(BACKSPACE)   &trans                &trans                                      &trans  &kp LG(GRAVE)         &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &trans  &trans
+&trans  &trans      &kp LG(Q)   &kp LG(BACKSPACE)   &trans                &trans                                      &trans  &kp LG(GRAVE)         &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &trans  &trans
 &trans  &trans      &trans      &trans              &trans                &trans                                      &trans  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans  &trans
                     &trans      &trans              &kp LS(LG(NUMBER_4))  &kp LS(LG(LC(NUMBER_4)))  &trans    &trans  &trans                        &trans
             >;
