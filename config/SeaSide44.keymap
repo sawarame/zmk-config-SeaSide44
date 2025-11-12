@@ -139,7 +139,7 @@
 &kp TAB                     &kp Q  &kp W           &kp E           &kp R        &kp T                                                            &kp Y        &kp U  &kp I                  &kp O            &kp P          &kp EQUAL
 &mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F        &kp G                                                            &kp H        &kp J  &kp K                  &lt 2 L          &kp SEMICOLON  &mthp RCTRL MINUS
 &mthp LSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V        &kp B                                                            &kp N        &kp M  &mthp RIGHT_GUI COMMA  &mt RALT PERIOD  &kp SLASH      &mthp RSHIFT BACKSLASH
-                                   &kp LANG2       &kp LANG1       &lt 3 LANG2  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 6 LANG1         &mo 9
+                                   &kp LANG2       &kp LANG1       &lt 3 LANG2  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 6 ENTER         &mo 9
             >;
         };
 
@@ -148,7 +148,7 @@
 &kp TAB                   &kp Q           &kp W           &kp E        &kp R        &kp T                                                            &kp Y        &kp U  &kp I              &kp O            &kp P                 &kp JIS_EQUAL
 &mthp LCTRL JIS_LBRACKET  &kp A           &kp S           &kp D        &kp F        &kp G                                                            &kp H        &kp J  &kp K              &lt 2 L          &kp SEMICOLON         &mthp RCTRL MINUS
 &lt 8 JIS_RBRACKET        &mt LEFT_WIN Z  &mt LEFT_ALT X  &mt LCTRL C  &kp V        &kp B                                                            &kp N        &kp M  &mthp RCTRL COMMA  &mt RALT PERIOD  &mt RIGHT_WIN SLASH   &lt 8 JIS_YEN
-                                          &kp LANG2       &kp LANG1    &lt 3 LANG2  &lt 5 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 7 LANG1         &lt 9 JIS_HANZEN
+                                          &kp LANG2       &kp LANG1    &lt 3 LANG2  &lt 5 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 7 ENTER         &lt 9 JIS_HANZEN
             >;
         };
 
@@ -191,19 +191,19 @@
 
         SHORTCUT_MAC {
             bindings = <
-&trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)          &kp LG(N4)                &kp LG(N5)                                     &trans  &trans                &kp LG(MINUS)             &kp LG(LS(EQUAL))          &trans                 &trans
-&trans  &trans      &kp LG(Q)   &kp LG(BACKSPACE)   &kp LC(UP_ARROW)          &trans                                         &trans  &kp LG(LEFT_BRACKET)  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &trans
-&trans  &trans      &trans      &trans              &kp LS(LG(LC(NUMBER_4)))  &kp LS(LG(NUMBER_4))                           &trans  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans                 &trans
-                    &trans      &trans              &kp LS(ENTER)             &kp ENTER             &kp LG(ENTER)    &trans  &trans                        &trans
+&trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)          &kp LG(N4)         &kp LG(N5)                                &trans  &trans                &kp LG(MINUS)             &kp LG(LS(EQUAL))          &trans                 &trans
+&trans  &trans      &kp LG(Q)   &kp LG(BACKSPACE)   &kp LC(UP_ARROW)   &trans                                    &trans  &kp LG(LEFT_BRACKET)  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &trans
+&trans  &trans      &trans      &trans              &trans             &trans                                    &trans  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans                 &trans
+                    &trans      &trans              &kp LANG1          &LS(LG(LC(NUMBER_4)))   &trans    &trans  &trans                        &trans
             >;
         };
 
         SHORTCUT_WIN {
             bindings = <
-&trans  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)     &kp LC(N5)                             &trans  &trans              &kp LC(MINUS)           &kp LC(JIS_PLUS)         &trans               &trans
-&trans  &trans      &kp LA(F4)  &kp DELETE  &kp LG(TAB)    &trans                                 &trans  &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(RIGHT_ARROW)  &trans
-&trans  &trans      &trans      &trans      &kp LG(LS(S))  &trans                                 &trans  &alt_space_lang2    &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans               &trans
-                    &trans      &trans      &kp LS(ENTER)  &kp ENTER    &kp LG(ENTER)     &trans  &trans                      &trans
+&trans  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)     &kp LC(N5)                         &trans  &trans              &kp LC(MINUS)           &kp LC(JIS_PLUS)         &trans               &trans
+&trans  &trans      &kp LA(F4)  &kp DELETE  &kp LG(TAB)    &trans                             &trans  &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(RIGHT_ARROW)  &trans
+&trans  &trans      &trans      &trans      &trans         &trans                             &trans  &alt_space_lang2    &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans               &trans
+                    &trans      &trans      &kp LANG1      &kp LG(LS(S))   trans      &trans  &trans                      &trans
             >;
         };
         
