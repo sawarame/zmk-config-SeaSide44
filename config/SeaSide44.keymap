@@ -218,10 +218,10 @@
         // Layer: 8
         SHIFT_WIN {
             bindings = <
-&kp TAB         &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)   &kp LS(T)                      &kp RS(Y)  &kp RS(U)  &kp RS(I)  &kp RS(O)  &kp RS(P)      &kp JIS_PLUS
-&kp JIS_LBRACE  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)   &kp LS(G)                      &kp RS(H)  &kp RS(J)  &kp RS(K)  &kp RS(L)  &kp JIS_COLON  &kp JIS_UNDERSCORE
-&kp JIS_RBRACE  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)   &kp LS(B)                      &kp RS(N)  &kp RS(M)  &kp LT     &kp GT     &kp QUESTION   &kp JIS_PIPE
-                           &trans     &trans     &trans      &trans       &trans    &trans  &trans                &trans
+&kp TAB         &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)   &kp LS(T)                       &kp RS(Y)  &kp RS(U)  &kp RS(I)  &kp RS(O)  &kp RS(P)      &kp JIS_PLUS
+&kp JIS_LBRACE  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)   &kp LS(G)                       &kp RS(H)  &kp RS(J)  &kp RS(K)  &kp RS(L)  &kp JIS_COLON  &kp JIS_UNDERSCORE
+&kp JIS_RBRACE  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)   &kp LS(B)                       &kp RS(N)  &kp RS(M)  &kp LT     &kp GT     &kp QUESTION   &kp JIS_PIPE
+                           &trans     &trans     &trans      &trans       &trans     &trans  &trans                &trans
             >;
         };
 
