@@ -8,11 +8,9 @@
 #define MOUSE 2
 #define SCROLL_AND_FUNCTION 3
 #define NUM_AND_SYMBOL 4
-#define NUM_AND_SYMBOL_JIS 5
-#define SHORTCUT_MAC 6
-#define SHORTCUT_WIN 7
-#define SHIFT_WIN 8
-#define CONFIG 9
+#define SHORTCUT_MAC 5
+#define SHORTCUT_WIN 6
+#define CONFIG 7
 
 // OS設定を日本語キーボードのまま使用するための変換定義
 #define JIS_EQUAL        UNDER             // =
@@ -140,17 +138,17 @@
 &kp TAB                     &kp Q  &kp W           &kp E           &kp R        &kp T                                                            &kp Y        &kp U  &kp I                  &kp O            &kp P          &kp EQUAL
 &mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F        &kp G                                                            &kp H        &kp J  &kp K                  &lt 2 L          &kp SEMICOLON  &mthp RCTRL MINUS
 &mthp LSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V        &kp B                                                            &kp N        &kp M  &mthp RIGHT_GUI COMMA  &mt RALT PERIOD  &kp SLASH      &mthp RSHIFT BACKSLASH
-                                   &kp LANG2       &kp LANG1       &lt 3 LANG2  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 6 ENTER         &mo 9
+                                   &kp LANG2       &kp LANG1       &lt 3 LANG2  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 5 ENTER         &mo 7
             >;
         };
 
         // Layer: 1 
         DEFAULT_WIN {
             bindings = <
-&mt LEFT_WIN TAB          &kp Q  &kp W           &kp E        &kp R        &kp T                                                            &kp Y        &kp U  &kp I              &kp O            &kp P                 &mt RIGHT_WIN JIS_EQUAL
-&mthp LCTRL JIS_LBRACKET  &kp A  &kp S           &kp D        &kp F        &kp G                                                            &kp H        &kp J  &kp K              &lt 2 L          &kp SEMICOLON         &mthp RCTRL MINUS
-&lt 8 JIS_RBRACKET        &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &kp V        &kp B                                                            &kp N        &kp M  &mthp RCTRL COMMA  &mt RALT PERIOD  &kp SLASH   &lt 8 JIS_YEN
-                                 &kp LANG2       &kp LANG1    &lt 3 LANG2  &lt 5 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 7 ENTER         &lt 9 JIS_HANZEN
+&mt LEFT_WIN TAB            &kp Q  &kp W           &kp E        &kp R        &kp T                                                            &kp Y        &kp U  &kp I              &kp O            &kp P           &mt RIGHT_WIN EQUAL
+&mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D        &kp F        &kp G                                                            &kp H        &kp J  &kp K              &lt 2 L          &kp SEMICOLON   &mthp RCTRL MINUS
+&mthp LSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &kp V        &kp B                                                            &kp N        &kp M  &mthp RCTRL COMMA  &mt RALT PERIOD  &kp SLASH       &mthp RSHIFT BACKSLASH
+                                   &kp LANG2       &kp LANG1    &lt 3 LANG2  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 6 ENTER         &mo 7
             >;
         };
 
@@ -185,17 +183,7 @@
             >;
         };
 
-        // Layer: 5
-        NUM_AND_SYMBOL_JIS {
-            bindings = <
-&kp JIS_BACKQUOTE  &kp N1           &kp N2      &kp N3    &kp N4      &kp N5                         &kp N6         &kp N7             &kp N8            &kp N9        &kp N0        &kp JIS_DQUOTE
-&kp JIS_TILDE      &kp EXCLAMATION  &kp JIS_AT  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp JIS_CARET  &kp JIS_AMPERSAND  &kp JIS_ASTERISK  &kp JIS_LPAR  &kp JIS_RPAR  &kp JIS_QUOTE
-&trans             &trans           &trans      &trans    &trans      &trans                         &trans         &trans             &trans            &trans        &trans        &trans
-                                    &trans      &trans    &trans      &trans       &trans    &trans  &trans                            &trans
-            >;
-        };
-
-        // Layer: 6
+        // Layer: 5 
         SHORTCUT_MAC {
             bindings = <
 &trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)          &kp LG(N4)         &kp LG(N5)                                   &trans  &trans                &kp LG(MINUS)             &kp LG(LS(EQUAL))          &trans                 &kp LG(Q)
@@ -205,7 +193,7 @@
             >;
         };
 
-        // Layer: 7
+        // Layer: 6
         SHORTCUT_WIN {
             bindings = <
 &trans  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)     &kp LC(N5)                         &trans     &trans              &kp LC(MINUS)           &kp LC(JIS_PLUS)         &trans               &kp LA(F4)
@@ -215,17 +203,7 @@
             >;
         };
         
-        // Layer: 8
-        SHIFT_WIN {
-            bindings = <
-&kp TAB         &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)   &kp LS(T)                       &kp RS(Y)  &kp RS(U)  &kp RS(I)  &kp RS(O)  &kp RS(P)      &kp JIS_PLUS
-&kp JIS_LBRACE  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)   &kp LS(G)                       &kp RS(H)  &kp RS(J)  &kp RS(K)  &kp RS(L)  &kp JIS_COLON  &kp JIS_UNDERSCORE
-&kp JIS_RBRACE  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)   &kp LS(B)                       &kp RS(N)  &kp RS(M)  &kp LT     &kp GT     &kp QUESTION   &kp JIS_PIPE
-                           &trans     &trans     &trans      &trans       &trans     &trans  &trans                &trans
-            >;
-        };
-
-        // Layer: 9
+        // Layer: 7
         CONFIG {
             bindings = <
 &trans  &bt_0           &bt_1          &bt_2          &trans         &trans                           &trans  &trans  &trans  &trans  &trans  &trans
