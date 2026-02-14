@@ -93,7 +93,7 @@
         bt_1: bt_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &bt BT_DISC 0 &bt BT_DISC 2 &to 1>;
+            bindings = <&bt BT_SEL 1 &bt BT_DISC 0 &bt BT_DISC 2 &to 0>;
             label = "BT_1";
         };
 
@@ -135,9 +135,9 @@
         // Layer: 0
         DEFAULT_MAC {
             bindings = <
-&kp TAB                     &kp Q  &kp W           &kp E           &kp R        &kp T                                                            &kp Y        &kp U  &kp I                  &kp O            &kp P          &kp EQUAL
-&mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F        &kp G                                                            &kp H        &kp J  &kp K                  &lt 2 L          &kp SEMICOLON  &kp MINUS
-&mthp LSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V        &kp B                                                            &kp N        &kp M  &mthp RIGHT_GUI COMMA  &mt RALT PERIOD  &kp SLASH      &kp BACKSLASH
+&kp TAB                     &kp Q  &kp W           &kp E           &kp R        &kp T                                                            &kp Y        &kp U  &kp I                  &kp O            &kp P          &kp MINUS
+&mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F        &kp G                                                            &kp H        &kp J  &kp K                  &lt 2 L          &kp SEMICOLON  &mthp RCTRL EQUAL  
+&mthp LSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V        &kp B                                                            &kp N        &kp M  &mthp RIGHT_GUI COMMA  &mt RALT PERIOD  &kp SLASH      &mthp RSHIFT BACKSLASH
                                    &kp LANG2       &kp LANG1       &lt 3 LANG2  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 5 ENTER         &mo 7
             >;
         };
@@ -145,20 +145,20 @@
         // Layer: 1 
         DEFAULT_WIN {
             bindings = <
-&mt LEFT_WIN TAB            &kp Q  &kp W           &kp E        &kp R        &kp T                                                            &kp Y        &kp U  &kp I              &kp O            &kp P           &mt RIGHT_WIN EQUAL
-&mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D        &kp F        &kp G                                                            &kp H        &kp J  &kp K              &lt 2 L          &kp SEMICOLON   &kp MINUS
-&mthp LSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &kp V        &kp B                                                            &kp N        &kp M  &mthp RCTRL COMMA  &mt RALT PERIOD  &kp SLASH       &kp BACKSLASH
-                                   &kp LANG2       &kp LANG1    &lt 3 LANG2  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 6 ENTER         &mo 7
+&mt LEFT_WIN TAB            &kp Q  &kp W           &kp E        &kp R        &kp T                                                            &kp Y        &kp U  &kp I              &kp O            &kp P           &mt RIGHT_WIN MINUS
+&mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D        &kp F        &kp G                                                            &kp H        &kp J  &kp K              &lt 2 L          &kp SEMICOLON   &mthp RCTRL EQUAL
+&mthp LSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &kp V        &kp B                                                            &kp N        &kp M  &mthp RCTRL COMMA  &mt RALT PERIOD  &kp SLASH       &mthp RSHIFT BACKSLASH
+                                   &kp LANG2       &kp LANG1    &lt 3 LANG2  &lt 4 SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt 6 ENTER        &mo 7
             >;
         };
 
         // Layer: 2
         MOUSE {
             bindings = <
-&trans      &trans  &trans           &msc SCRL_DOWN  &trans          &trans                    &trans  &trans    &trans    &trans  &trans  &trans
-&kp LCTRL   &trans  &msc SCRL_RIGHT  &msc SCRL_UP    &msc SCRL_LEFT  &trans                    &trans  &mkp MB1  &mkp MB2  &trans  &trans  &kp RCTRL
-&kp LSHIFT  &trans  &trans           &trans          &trans          &trans                    &trans  &mkp MB3  &trans    &trans  &trans  &kp RSHIFT
-                    &trans           &trans          &trans          &trans  &trans    &trans  &trans            &trans
+&trans  &trans  &trans           &kp UP_ARROW    &trans           &trans                    &trans  &trans    &trans    &trans  &trans  &trans
+&trans  &trans  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                    &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans 
+&trans  &trans  &trans           &trans          &trans           &trans                    &trans  &mkp MB3  &trans    &trans  &trans  &trans
+                &trans           &trans          &trans           &trans  &trans    &trans  &trans            &trans
             >;
         };
 
@@ -166,7 +166,7 @@
         //  コマンドキーやオプションキーと同時押しが必要なキーはここには書かない
         SCROLL_AND_FUNCTION {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6              &kp F7              &kp F8            &kp F9                 &kp F10       &trans
+&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6              &kp F7              &kp F8            &kp F9                 &kp F10       &kp BACKSPACE
 &trans  &kp F11  &kp F12  &trans  &trans  &trans                    &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &lt 2 RIGHT_ARROW      &kp C_BRI_UP  &kp C_VOLUME_UP 
 &trans  &trans   &trans   &trans  &trans  &trans                    &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(UP_ARROW)  &lt 2 LS(RIGHT_ARROW)  &kp C_BRI_DN  &kp C_VOLUME_DOWN
                  &trans   &trans  &trans  &trans  &trans    &trans  &kp LANG1                               &trans
@@ -186,20 +186,20 @@
         // Layer: 5 
         SHORTCUT_MAC {
             bindings = <
-&trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)          &kp LG(N4)         &kp LG(N5)                                   &trans  &trans                &kp LG(MINUS)             &kp LG(LS(EQUAL))          &trans                 &kp LG(Q)
-&trans  &trans      &trans      &kp LG(BACKSPACE)   &kp LC(UP_ARROW)   &trans                                       &trans  &kp LG(LEFT_BRACKET)  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &trans
-&trans  &trans      &trans      &trans              &trans             &trans                                       &trans  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans                 &trans
-                    &trans      &trans              &trans             &kp LS(LG(LC(NUMBER_4)))   &trans    &trans  &trans                        &trans
+&mt_escape LSHIFT 0  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)          &kp LG(N4)         &kp LG(N5)                                   &trans  &trans                &kp LG(MINUS)             &kp LG(LS(EQUAL))          &trans                 &kp LG(Q)
+&trans               &trans      &trans      &kp LG(BACKSPACE)   &kp LC(UP_ARROW)   &trans                                       &trans  &kp LG(LEFT_BRACKET)  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &trans
+&trans               &trans      &trans      &trans              &trans             &trans                                       &trans  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans                 &trans
+                                 &trans      &trans              &trans             &kp LS(LG(LC(NUMBER_4)))   &trans    &trans  &trans                        &trans
             >;
         };
 
         // Layer: 6
         SHORTCUT_WIN {
             bindings = <
-&trans  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)     &kp LC(N5)                         &trans     &trans              &kp LC(MINUS)           &kp LC(JIS_PLUS)         &trans               &kp LA(F4)
-&trans  &trans      &trans      &kp DELETE  &kp LG(TAB)    &trans                             &trans     &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(RIGHT_ARROW)  &trans
-&trans  &trans      &trans      &trans      &trans         &trans                             &kp LG(N)  &alt_space_lang2    &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans               &trans
-                    &trans      &trans      &trans         &kp LG(LS(S))   &trans     &trans  &trans                         &trans
+&mt_escape LSHIFT 0  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)     &kp LC(N5)                         &trans     &trans              &kp LC(MINUS)           &kp LC(JIS_PLUS)         &trans               &kp LA(F4)
+&trans               &trans      &trans      &kp DELETE  &kp LG(TAB)    &trans                             &trans     &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(RIGHT_ARROW)  &trans
+&trans               &trans      &trans      &trans      &trans         &trans                             &kp LG(N)  &alt_space_lang2    &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans               &trans
+                                 &trans      &trans      &trans         &kp LG(LS(S))   &trans     &trans  &trans                         &trans
             >;
         };
         
@@ -209,7 +209,7 @@
 &trans  &bt_0           &bt_1          &bt_2          &trans         &trans                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &bt BT_DISC 0   &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &bt BT_CLR      &trans         &trans         &trans         &trans                           &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans         &trans         &trans         &trans         &trans    &trans  &trans          &trans
+                        &to 0          &to 1          &trans         &trans         &trans    &trans  &trans          &trans
             >;
         };
     };
