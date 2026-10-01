@@ -71,7 +71,7 @@
         alt_space_lang2: alt_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &kp LANG2>;
+            bindings = <&kp LG(LA(SPACE)) &kp LANG2>;
             label = "ALT_SPACE_LANG2";
         };
         
