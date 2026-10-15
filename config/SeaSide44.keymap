@@ -56,22 +56,22 @@
 
         change_lang2 {
             bindings = <&kp LANG2>;
-            key-positions = <15 16>;
+            key-positions = <14 15>;
         };
 
         change_lang1 {
             bindings = <&kp LANG1>;
-            key-positions = <19 20>;
-        };
-
-        left_shift {
-            bindings = <&kp LSHIFT>;
-            key-positions = <14 15>;
-        };
-
-        right_shift {
-            bindings = <&kp RSHIFT>;
             key-positions = <20 21>;
+        };
+
+        left_config {
+            bindings = <&mo CONFIG>;
+            key-positions = <15 16>;
+        };
+
+        right_config {
+            bindings = <&mo CONFIG>;
+            key-positions = <19 20>;
         };
 
     };
@@ -191,9 +191,9 @@
         //  コマンドキーやオプションキーと同時押しが必要なキーはここには書かない
         SCROLL_AND_FUNCTION {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6              &kp F7              &kp F8            &kp F9                 &kp F10       &kp BACKSPACE
-&trans  &kp F11  &kp F12  &trans  &trans  &trans                    &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &lt 2 RIGHT_ARROW      &kp C_BRI_UP  &kp C_VOLUME_UP 
-&trans  &trans   &trans   &trans  &trans  &trans                    &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(UP_ARROW)  &lt 2 LS(RIGHT_ARROW)  &kp C_BRI_DN  &kp C_VOLUME_DOWN
+&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6              &kp F7              &kp F8            &kp F9                 &kp F10  &kp &trans　
+&trans  &kp F11  &kp F12  &trans  &trans  &trans                    &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &lt 2 RIGHT_ARROW      &trans   &kp &trans
+&trans  &trans   &trans   &trans  &trans  &trans                    &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(UP_ARROW)  &lt 2 LS(RIGHT_ARROW)  &trans   &kp &trans
                  &trans   &trans  &trans  &trans  &trans    &trans  &kp LANG1                               &trans
             >;
         };
@@ -213,7 +213,7 @@
             bindings = <
 &trans  &trans  &trans       &kp LG(LC(F))       &kp LC(UP_ARROW)  &trans                                        &trans      &kp LG(N0)            &kp LG(MINUS)             &kp LG(LS(EQUAL))          &trans                 &kp LG(Q)
 &trans  &trans  &kp LS(TAB)  &kp LEFT_GUI        &kp TAB           &trans                                        &trans      &kp LG(LEFT_BRACKET)  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &trans
-&trans  &trans  &trans       &kp LG(BACKSPACE)   &trans            &trans                                        &kp LG(N4)  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans                 &trans
+&trans  &trans  &trans       &kp LG(BACKSPACE)   &kp Q             &trans                                        &kp LG(N4)  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans                 &trans
                 &trans       &trans              &kp LS(LG(N4))    &kp LS(LG(LC(N4)))  &kp LS(LG(N5))    &trans  &trans                        &trans
             >;
         };
@@ -231,10 +231,10 @@
         // Layer: 7
         CONFIG {
             bindings = <
-&trans  &bt_0           &bt_1          &bt_2          &bt_3          &trans                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_DISC 0   &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_CLR      &trans         &trans         &trans         &trans                           &trans  &trans  &trans  &trans  &trans  &trans
-                        &to 0          &to 1          &trans         &trans         &trans    &trans  &trans          &trans
+&trans  &bt_0           &bt_1          &bt_2          &bt_3          &trans                           &trans        &trans             &trans  &trans  &trans  &trans
+&trans  &bt BT_DISC 0   &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                    &kp C_BRI_UP  &kp C_VOLUME_UP    &trans  &trans  &trans  &trans
+&trans  &bt BT_CLR      &trans         &trans         &trans         &trans                           &kp C_BRI_DN  &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans
+                        &to 0          &to 1          &trans         &trans         &trans    &trans  &trans                           &trans
             >;
         };
     };
