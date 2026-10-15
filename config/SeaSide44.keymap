@@ -54,10 +54,26 @@
     combos {
         compatible = "zmk,combos";
 
-        enter {
-            bindings = <&kp ENTER>;
+        change_lang2 {
+            bindings = <&kp LANG2>;
+            key-positions = <14 15>;
+        };
+
+        change_lang1 {
+            bindings = <&kp LANG1>;
             key-positions = <19 20>;
         };
+
+        left_shift {
+            bindings = <&kp LSHIFT>;
+            key-positions = <13 14>;
+        };
+
+        right_shift {
+            bindings = <&kp RSHIFT>;
+            key-positions = <20 21>;
+        };
+
     };
 
     macros {
