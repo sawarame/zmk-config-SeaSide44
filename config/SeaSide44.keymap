@@ -218,7 +218,6 @@
             >;
         };
 
-&trans  &trans  &kp LS(TAB)  &kp LEFT_ALT  &kp TAB      &trans                             &trans     &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(RIGHT_ARROW)  &trans
         // Layer: 6
         SHORTCUT_WIN {
             bindings = <
