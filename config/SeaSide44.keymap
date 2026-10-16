@@ -56,7 +56,7 @@
 
         change_lang2 {
             bindings = <&kp LANG2>;
-            key-positions = <14 15>;
+            key-positions = <32 33>;
         };
 
         change_lang1 {
@@ -77,7 +77,7 @@
     };
 
     macros {
-        // エスケープキーで半角入力
+        // エスケープキーと半角モード
         escape_lang2: escape_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -211,20 +211,21 @@
         // Layer: 5 
         SHORTCUT_MAC {
             bindings = <
-&trans  &trans  &trans       &kp LG(LC(F))       &kp LC(UP_ARROW)  &trans                                        &trans      &kp LG(N0)            &kp LG(MINUS)             &kp LG(LS(EQUAL))          &trans                 &kp LG(Q)
-&trans  &trans  &kp LS(TAB)  &kp LEFT_GUI        &kp TAB           &trans                                        &trans      &kp LG(LEFT_BRACKET)  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &trans
-&trans  &trans  &trans       &kp LG(BACKSPACE)   &kp Q             &trans                                        &kp LG(N4)  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans                 &trans
-                &trans       &trans              &kp LS(LG(N4))    &kp LS(LG(LC(N4)))  &kp LS(LG(N5))    &trans  &trans                        &trans
+&trans  &trans                &trans                 &kp LG(LC(F))          &kp LC(UP_ARROW)  &trans                                        &trans      &kp LG(N0)            &kp LG(MINUS)             &kp LG(LS(EQUAL))          &kp LG(BACKSPACE)  &trans
+&trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LS(TAB)            &kp TAB           &kp Q                                         &trans      &kp LEFT_GUI          &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(Q)          &trans
+&trans  &kp LG(Z)             &kp LG(X)              &kp LG(C)              &kp LG(V)         &trans                                        &kp LG(N4)  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans             &trans
+                              &trans                 &trans                 &kp LS(LG(N4))    &kp LS(LG(LC(N4)))  &kp LS(LG(N5))    &trans  &trans                        &trans
             >;
         };
 
+&trans  &trans  &kp LS(TAB)  &kp LEFT_ALT  &kp TAB      &trans                             &trans     &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(RIGHT_ARROW)  &trans
         // Layer: 6
         SHORTCUT_WIN {
             bindings = <
-&trans  &trans  &trans       &trans        &kp LG(TAB)  &trans                             &trans     &kp LC(N0)          &kp LC(MINUS)           &kp LC(EQUAL)            &trans               &kp LA(F4)
-&trans  &trans  &kp LS(TAB)  &kp LEFT_ALT  &kp TAB      &trans                             &trans     &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(RIGHT_ARROW)  &trans
-&trans  &trans  &trans       &kp DELETE    &trans       &trans                             &kp LG(N)  &alt_space_lang2    &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans               &trans
-                &trans       &trans        &trans       &kp LG(LS(S))   &trans     &trans  &trans                         &trans
+&trans  &trans              &trans           &trans       &kp LG(TAB)  &trans                             &trans     &kp LC(N0)          &kp LC(MINUS)           &kp LC(EQUAL)            &kp DELETE  &trans 
+&trans  &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))  &kp LS(TAB)  &kp TAB      &trans                             &trans     &kp LEFT_ALT        &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(F4)  &trans
+&trans  &kp LC(Z)           &kp LC(X)        &kp LC(C)    &kp LC(V)    &trans                             &kp LG(N)  &alt_space_lang2    &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans      &trans
+                            &trans           &trans       &trans       &kp LG(LS(S))   &trans     &trans  &trans                         &trans
             >;
         };
         
