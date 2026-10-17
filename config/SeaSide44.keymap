@@ -56,7 +56,7 @@
 
         change_lang2 {
             bindings = <&kp LANG2>;
-            key-positions = <32 33>;
+            key-positions = <14 15>;
         };
 
         change_lang1 {
@@ -160,20 +160,20 @@
         // Layer: 0
         DEFAULT_MAC {
             bindings = <
-&kp TAB                     &kp Q  &kp W           &kp E           &kp R                        &kp T                                                                         &kp Y                   &kp U  &kp I                &kp O            &kp P          &kp MINUS
-&mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D           &kp F                        &kp G                                                                         &kp H                   &kp J  &kp K                &lt MOUSE L      &kp SEMICOLON  &mthp RCTRL EQUAL  
-&mthp LSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V                        &kp B                                                                         &kp N                   &kp M  &mt RIGHT_GUI COMMA  &mt RALT PERIOD  &kp SLASH      &mthp RSHIFT BACKSLASH
-                                   &trans          &trans          &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_MAC ENTER         &mo CONFIG
+&kp TAB                     &kp Q        &kp W           &kp E           &kp R                        &kp T                                                                         &kp Y                   &kp U  &kp I                &kp O            &kp P            &kp MINUS
+&mthp LCTRL LEFT_BRACKET    &kp A        &kp S           &kp D           &kp F                        &kp G                                                                         &kp H                   &kp J  &kp K                &lt MOUSE L      &kp SEMICOLON    &mthp RCTRL EQUAL  
+&mthp LSHIFT RIGHT_BRACKET  &mt LCTRL Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V                        &kp B                                                                         &kp N                   &kp M  &mt RIGHT_GUI COMMA  &mt RALT PERIOD  &mt RCTRL SLASH  &mthp RSHIFT BACKSLASH
+                                         &trans          &trans          &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_MAC ENTER         &mo CONFIG
             >;
         };
 
         // Layer: 1 
         DEFAULT_WIN {
             bindings = <
-&mt LEFT_WIN TAB            &kp Q  &kp W           &kp E        &kp R                        &kp T                                                                         &kp Y                   &kp U  &kp I            &kp O            &kp P           &mt RIGHT_WIN MINUS
-&mthp LCTRL LEFT_BRACKET    &kp A  &kp S           &kp D        &kp F                        &kp G                                                                         &kp H                   &kp J  &kp K            &lt MOUSE L      &kp SEMICOLON   &mthp RCTRL EQUAL
-&mthp LSHIFT RIGHT_BRACKET  &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &kp V                        &kp B                                                                         &kp N                   &kp M  &mt RCTRL COMMA  &mt RALT PERIOD  &kp SLASH       &mthp RSHIFT BACKSLASH
-                                   &trans          &trans       &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_WIN ENTER         &mo CONFIG
+&mt LEFT_WIN TAB            &kp Q           &kp W           &kp E        &kp R                        &kp T                                                                         &kp Y                   &kp U  &kp I            &kp O            &kp P                &mt RIGHT_WIN MINUS
+&mthp LCTRL LEFT_BRACKET    &kp A           &kp S           &kp D        &kp F                        &kp G                                                                         &kp H                   &kp J  &kp K            &lt MOUSE L      &kp SEMICOLON        &mthp RCTRL EQUAL
+&mthp LSHIFT RIGHT_BRACKET  &mt LEFT_WIN Z  &mt LEFT_ALT X  &mt LCTRL C  &kp V                        &kp B                                                                         &kp N                   &kp M  &mt RCTRL COMMA  &mt RALT PERIOD  &mt RIGHT_WIN SLASH  &mthp RSHIFT BACKSLASH
+                                            &trans          &trans       &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_WIN ENTER         &mo CONFIG
             >;
         };
 
