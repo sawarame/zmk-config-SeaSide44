@@ -2,6 +2,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+// #include <mouse-gesture.dtsi>
+// #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 #define DEFAULT_MAC 0
 #define DEFAULT_WIN 1
@@ -153,7 +155,7 @@
 &trans  &kp Q        &kp W           &kp E           &kp R                        &kp T                                                                         &kp Y                   &kp U  &kp I                &kp O            &kp P            &trans
 &trans  &kp A        &kp S           &kp D           &kp F                        &kp G                                                                         &kp H                   &kp J  &kp K                &lt MOUSE L      &kp SEMICOLON    &trans
 &trans  &mt LCTRL Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V                        &kp B                                                                         &kp N                   &kp M  &mt RIGHT_GUI COMMA  &mt RALT PERIOD  &mt RCTRL SLASH  &trans
-                                         &trans          &trans          &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_MAC ENTER         &mo CONFIG
+                     &trans          &trans          &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_MAC ENTER         &mo CONFIG
             >;
         };
 
@@ -163,7 +165,7 @@
 &trans  &kp Q           &kp W           &kp E        &kp R                        &kp T                                                                         &kp Y                   &kp U  &kp I            &kp O            &kp P                &trans
 &trans  &kp A           &kp S           &kp D        &kp F                        &kp G                                                                         &kp H                   &kp J  &kp K            &lt MOUSE L      &kp SEMICOLON        &trans
 &trans  &mt LEFT_WIN Z  &mt LEFT_ALT X  &mt LCTRL C  &kp V                        &kp B                                                                         &kp N                   &kp M  &mt RCTRL COMMA  &mt RALT PERIOD  &mt RIGHT_WIN SLASH  &trans
-                                            &trans          &trans       &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_WIN ENTER         &mo CONFIG
+                        &trans          &trans       &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_WIN ENTER         &mo CONFIG
             >;
         };
 
@@ -181,10 +183,10 @@
         //  コマンドキーやオプションキーと同時押しが必要なキーはここには書かない
         SCROLL_AND_FUNCTION {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6              &kp F7              &kp F8            &kp F9                 &kp F10  &trans
-&trans  &kp F11  &kp F12  &trans  &trans  &trans                    &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &lt 2 RIGHT_ARROW      &trans   &trans
-&trans  &trans   &trans   &trans  &trans  &trans                    &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(UP_ARROW)  &lt 2 LS(RIGHT_ARROW)  &trans   &trans
-                 &trans   &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
+&trans  &kp F1   &kp F2   &kp F3     &kp F4     &kp F5                    &kp F6              &kp F7              &kp F8            &kp F9                 &kp F10  &trans
+&trans  &kp F11  &kp F12  &kp LANG2  &kp LANG1  &trans                    &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &lt 2 RIGHT_ARROW      &trans   &trans
+&trans  &trans   &trans   &trans     &trans     &trans                    &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(UP_ARROW)  &lt 2 LS(RIGHT_ARROW)  &trans   &trans
+                 &trans   &trans     &trans     &trans  &trans    &trans  &trans                                  &trans
             >;
         };
 
@@ -204,7 +206,7 @@
 &trans  &trans                &trans                 &kp LG(LC(F))          &kp LC(UP_ARROW)  &kp LS(LG(N4))                        &trans      &kp LG(N0)            &kp LG(MINUS)             &kp LG(LS(EQUAL))          &kp LG(BACKSPACE)  &trans
 &trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LS(TAB)            &kp TAB           &kp LS(LG(LC(N4)))                    &trans      &kp LEFT_GUI          &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(Q)          &trans
 &trans  &kp LG(Z)             &kp LG(X)              &kp LG(C)              &kp LG(V)         &kp LS(LG(N5))                        &kp LG(N4)  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans             &trans
-                              &trans                 &trans                 &kp LANG2         &kp LANG1           &trans    &trans  &trans                            &trans
+                              &trans                 &trans                 &trans            &trans              &trans    &trans  &trans                            &trans
             >;
         };
 
