@@ -203,10 +203,10 @@
         // Layer: 5 
         SHORTCUT_MAC {
             bindings = <
-&trans  &trans                &trans                 &kp LG(LC(F))          &kp LC(UP_ARROW)  &kp LS(LG(N4))                        &trans      &kp LG(N0)            &kp LG(MINUS)             &kp LG(LS(EQUAL))          &kp LG(BACKSPACE)  &trans
-&trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LS(TAB)            &kp TAB           &kp LS(LG(LC(N4)))                    &trans      &kp LEFT_GUI          &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(Q)          &trans
-&trans  &kp LG(Z)             &kp LG(X)              &kp LG(C)              &kp LG(V)         &kp LS(LG(N5))                        &kp LG(N4)  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans             &trans
-                              &trans                 &trans                 &trans            &trans              &trans    &trans  &trans                            &trans
+&trans  &trans                &trans                 &kp LG(LC(F))          &kp LC(UP_ARROW)  &kp LS(LG(N4))                        &trans  &kp LG(N0)            &kp LG(MINUS)             &kp LG(LS(EQUAL))          &kp LG(BACKSPACE)  &trans
+&trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LS(TAB)            &kp TAB           &kp LS(LG(LC(N4)))                    &trans  &kp LG(N4)            &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(Q)          &trans
+&trans  &kp LG(Z)             &kp LG(X)              &kp LG(C)              &kp LG(V)         &kp LS(LG(N5))                        &trans  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans             &trans
+                              &trans                 &trans                 &trans            &kp LEFT_ALT        &trans    &trans  &trans                            &trans
             >;
         };
 
@@ -214,9 +214,9 @@
         SHORTCUT_WIN {
             bindings = <
 &trans  &trans              &trans           &trans       &kp LG(TAB)  &trans                            &trans     &kp LC(N0)          &kp LC(MINUS)           &kp LC(EQUAL)            &kp DELETE  &trans 
-&trans  &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))  &kp LS(TAB)  &kp TAB      &kp LG(LS(S))                     &trans     &kp LEFT_ALT        &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(F4)  &trans
+&trans  &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))  &kp LS(TAB)  &kp TAB      &kp LG(LS(S))                     &trans     &trans              &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(F4)  &trans
 &trans  &kp LC(Z)           &kp LC(X)        &kp LC(C)    &kp LC(V)    &trans                            &kp LG(N)  &alt_space_lang2    &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans      &trans
-                            &trans           &trans       &kp LANG2    &kp LANG1      &trans     &trans  &trans                         &trans
+                            &trans           &trans       &trans       &kp LEFT_ALT   &trans     &trans  &trans                         &trans
             >;
         };
         
