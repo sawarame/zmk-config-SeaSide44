@@ -206,7 +206,7 @@
 &trans  &trans                &trans                 &kp LG(LC(F))          &kp LC(UP_ARROW)  &kp LS(LG(N4))                        &trans  &kp LG(N0)            &kp LG(MINUS)             &kp LG(LS(EQUAL))          &kp LG(BACKSPACE)  &trans
 &trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LS(TAB)            &kp TAB           &kp LS(LG(LC(N4)))                    &trans  &kp LG(N4)            &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(Q)          &trans
 &trans  &kp LG(Z)             &kp LG(X)              &kp LG(C)              &kp LG(V)         &kp LS(LG(N5))                        &trans  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans             &trans
-                              &trans                 &trans                 &trans            &kp LEFT_ALT        &trans    &trans  &trans                            &trans
+                              &trans                 &trans                 &trans            &kp LEFT_GUI        &trans    &trans  &trans                        &trans
             >;
         };
 
