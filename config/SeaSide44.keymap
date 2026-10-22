@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+
 // #include <mouse-gesture.dtsi>
 // #include <zephyr/dt-bindings/input/input-event-codes.h>
 
@@ -15,6 +16,7 @@
 #define CONFIG 7
 
 // OS設定を日本語キーボードのまま使用するための変換定義
+
 #define JIS_EQUAL        UNDER             // =
 #define JIS_PLUS         COLON             // +
 #define JIS_COLON        SINGLE_QUOTE      // :
@@ -28,7 +30,6 @@
 #define JIS_KANA         LANGUAGE_1        // かな
 #define JIS_EISU         LANGUAGE_2        // 英数
 #define JIS_HANZEN       GRAVE             // 半角/全角
-
 #define JIS_BACKQUOTE    LEFT_BRACE        // `
 #define JIS_TILDE        PLUS              // ~
 #define JIS_AT           LEFT_BRACKET      // @
@@ -56,17 +57,16 @@
     combos {
         compatible = "zmk,combos";
 
-
         right_gui_mac {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <20 21>;
-            layers = <DEFAULT_MAC>;
+            layers = <0>;
         };
 
         right_alt_win {
             bindings = <&mo RIGHT_ALT>;
             key-positions = <20 21>;
-            layers = <DEFAULT_WIN>;
+            layers = <1>;
         };
 
         left_config {
@@ -78,11 +78,11 @@
             bindings = <&mo CONFIG>;
             key-positions = <19 20>;
         };
-
     };
 
     macros {
         // エスケープキーと半角モード
+
         escape_lang2: escape_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -91,14 +91,16 @@
         };
 
         // Windowsのランチャー起動
+
         alt_space_lang2: alt_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(LA(SPACE)) &kp LANG2>;
             label = "ALT_SPACE_LANG2";
         };
-        
+
         // Macのランチャー起動
+
         command_space_lang2: command_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -163,6 +165,7 @@
         compatible = "zmk,keymap";
 
         // Layer: 0
+
         DEFAULT_MAC {
             bindings = <
 &trans  &kp Q        &kp W           &kp E           &kp R                        &kp T                                                                         &kp Y                   &kp U  &kp I                &kp O            &kp P            &trans
@@ -173,6 +176,7 @@
         };
 
         // Layer: 1 
+
         DEFAULT_WIN {
             bindings = <
 &trans  &kp Q           &kp W           &kp E        &kp R                        &kp T                                                                         &kp Y                   &kp U  &kp I            &kp O            &kp P                &trans
@@ -183,10 +187,11 @@
         };
 
         // Layer: 2
+
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans 
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB3  &trans    &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans
             >;
@@ -194,6 +199,7 @@
 
         // Layer: 3
         //  コマンドキーやオプションキーと同時押しが必要なキーはここには書かない
+
         SCROLL_AND_FUNCTION {
             bindings = <
 &trans  &kp F1   &kp F2   &kp F3     &kp F4     &kp F5                    &kp F6              &kp F7              &kp F8            &kp F9                 &kp F10  &trans
@@ -204,6 +210,7 @@
         };
 
         // Layer: 4
+
         NUM_AND_SYMBOL {
             bindings = <
 &trans  &kp N1           &kp N2            &kp N3    &kp N4      &kp N5                         &kp N6            &kp N7             &kp N8        &kp N9     &kp N0         &trans
@@ -214,36 +221,36 @@
         };
 
         // Layer: 5 
+
         SHORTCUT_MAC {
             bindings = <
-&trans  &trans                &trans                 &kp LG(LC(F))          &kp LC(UP_ARROW)  &kp LS(LG(N4))                        &trans  &kp LG(N0)            &kp LG(MINUS)             &kp LG(LS(EQUAL))          &kp LG(BACKSPACE)  &trans
-&trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans                 &trans            &kp LS(LG(LC(N4)))                    &trans  &kp LG(N4)            &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(Q)          &trans
-&trans  &kp LG(Z)             &kp LG(X)              &kp LG(C)              &kp LG(V)         &kp LS(LG(N5))                        &trans  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans             &trans
-                              &trans                 &trans                 &trans            &trans              &trans    &trans  &trans                        &trans
+&trans  &trans                &trans                 &kp LG(LC(F))  &kp LC(UP_ARROW)  &kp LS(LG(N4))                        &trans  &kp LG(N0)            &kp LG(MINUS)             &kp LG(LS(EQUAL))          &kp LG(BACKSPACE)  &trans
+&trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans         &trans            &kp LS(LG(LC(N4)))                    &trans  &kp LG(N4)            &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(Q)          &trans
+&trans  &kp LG(Z)             &kp LG(X)              &kp LG(C)      &kp LG(V)         &kp LS(LG(N5))                        &trans  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans             &trans
+                              &trans                 &trans         &trans            &trans              &trans    &trans  &trans                        &trans
             >;
         };
 
         // Layer: 6
+
         SHORTCUT_WIN {
             bindings = <
-&trans  &trans              &trans           &trans       &kp LG(TAB)  &trans                            &trans     &kp LC(N0)          &kp LC(MINUS)           &kp LC(EQUAL)            &kp DELETE  &trans 
-&trans  &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))  &trans       &trans       &kp LG(LS(S))                     &trans     &trans              &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(F4)  &trans
-&trans  &kp LC(Z)           &kp LC(X)        &kp LC(C)    &kp LC(V)    &trans                            &kp LG(N)  &alt_space_lang2    &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans      &trans
-                            &trans           &trans       &trans       &trans         &trans     &trans  &trans                         &trans
+&trans  &trans              &trans           &trans     &kp LG(TAB)  &trans                           &trans     &kp LC(N0)        &kp LC(MINUS)           &kp LC(EQUAL)            &kp DELETE  &trans
+&trans  &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))  &trans     &trans       &kp LG(LS(S))                    &trans     &trans            &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(F4)  &trans
+&trans  &kp LC(Z)           &kp LC(X)        &kp LC(C)  &kp LC(V)    &trans                           &kp LG(N)  &alt_space_lang2  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans      &trans
+                            &trans           &trans     &trans       &trans         &trans    &trans  &trans                       &trans
             >;
         };
-        
+
         // Layer: 7
+
         CONFIG {
             bindings = <
-&trans  &bt_0           &bt_1          &bt_2          &bt_3          &trans                           &trans        &trans             &trans  &trans  &trans  &trans
-&trans  &bt BT_DISC 0   &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                    &kp C_BRI_UP  &kp C_VOLUME_UP    &trans  &trans  &trans  &trans
-&trans  &bt BT_CLR      &trans         &trans         &trans         &trans                           &kp C_BRI_DN  &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans
-                        &to 0          &to 1          &trans         &trans         &trans    &trans  &trans                           &trans
+&trans  &bt_0          &bt_1          &bt_2          &bt_3          &trans                           &trans        &trans             &trans  &trans  &trans  &trans
+&trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                    &kp C_BRI_UP  &kp C_VOLUME_UP    &trans  &trans  &trans  &trans
+&trans  &bt BT_CLR     &trans         &trans         &trans         &trans                           &kp C_BRI_DN  &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans
+                       &to 0          &to 1          &trans         &trans         &trans    &trans  &trans                           &trans
             >;
         };
     };
 };
-
-
-
