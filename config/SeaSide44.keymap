@@ -82,7 +82,6 @@
 
     macros {
         // エスケープキーと半角モード
-
         escape_lang2: escape_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -91,7 +90,6 @@
         };
 
         // Windowsのランチャー起動
-
         alt_space_lang2: alt_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -100,12 +98,27 @@
         };
 
         // Macのランチャー起動
-
         command_space_lang2: command_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(SPACE) &kp LANG2>;
             label = "COMMAND_SPACE_LANG2";
+        };
+
+        // アドレスバーにフォーカスして半角にする Windows
+        forcus_addresbar_win: forcus_addresbar_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(L) &kp LANG2>;
+            label = "FORCUS_ADDRESBAR_WIN";
+        };
+
+        // アドレスバーにフォーカスして半角にする Mac
+        forcus_addresbar_mac: forcus_addresbar_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(L) &kp LANG2>;
+            label = "FORCUS_ADDRESBAR_MAC";
         };
 
         bt_0: bt_0 {
@@ -164,8 +177,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // Layer: 0
-
         DEFAULT_MAC {
             bindings = <
 &trans  &kp Q           &kp W           &kp E           &kp R                        &kp T                                                                         &kp Y                   &kp U  &kp I                &kp O            &kp P                  &trans
@@ -174,8 +185,6 @@
                         &trans          &trans          &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mthp RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_MAC ENTER         &mo CONFIG
             >;
         };
-
-        // Layer: 1 
 
         DEFAULT_WIN {
             bindings = <
@@ -186,8 +195,6 @@
             >;
         };
 
-        // Layer: 2
-
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans  &trans  &trans
@@ -197,9 +204,7 @@
             >;
         };
 
-        // Layer: 3
         //  コマンドキーやオプションキーと同時押しが必要なキーはここには書かない
-
         SCROLL_AND_FUNCTION {
             bindings = <
 &trans  &kp F1   &kp F2   &kp F3     &kp F4     &kp F5                    &kp F6              &kp F7              &kp F8            &kp F9                 &kp F10  &trans
@@ -208,8 +213,6 @@
                  &trans   &trans     &trans     &trans  &trans    &trans  &trans                                  &trans
             >;
         };
-
-        // Layer: 4
 
         NUM_AND_SYMBOL {
             bindings = <
@@ -220,29 +223,23 @@
             >;
         };
 
-        // Layer: 5 
-
         SHORTCUT_MAC {
             bindings = <
-&trans  &trans                &trans                 &kp LG(LC(F))  &kp LC(UP_ARROW)  &kp LS(LG(N4))                        &trans  &kp LG(N0)            &kp LG(MINUS)             &kp LG(LS(EQUAL))          &kp LG(BACKSPACE)  &trans
-&trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans         &trans            &kp LS(LG(LC(N4)))                    &trans  &kp LG(N4)            &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(Q)          &trans
-&trans  &kp LG(Z)             &kp LG(X)              &kp LG(C)      &kp LG(V)         &kp LS(LG(N5))                        &trans  &command_space_lang2  &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans             &trans
-                              &trans                 &trans         &trans            &trans              &trans    &trans  &trans                        &trans
+&trans  &trans                &trans                 &kp LG(LC(F))  &kp LC(UP_ARROW)  &kp LS(LG(N4))                        &trans  &kp LG(N0)             &kp LG(MINUS)             &kp LG(LS(EQUAL))          &kp LG(BACKSPACE)  &trans
+&trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans         &trans            &kp LS(LG(LC(N4)))                    &trans  &forcus_addresbar_mac  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(Q)          &trans
+&trans  &kp LG(Z)             &kp LG(X)              &kp LG(C)      &kp LG(V)         &kp LS(LG(N5))                        &trans  &command_space_lang2   &kp LC(LEFT_ARROW)        &kp LC(RIGHT_ARROW)        &trans             &trans
+                              &trans                 &trans         &trans            &kp LG(N4)          &trans    &trans  &trans                         &trans
             >;
         };
-
-        // Layer: 6
 
         SHORTCUT_WIN {
             bindings = <
-&trans  &trans              &trans           &trans     &kp LG(TAB)  &trans                           &trans     &kp LC(N0)        &kp LC(MINUS)           &kp LC(EQUAL)            &kp DELETE  &trans
-&trans  &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))  &trans     &trans       &kp LG(LS(S))                    &trans     &trans            &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(F4)  &trans
-&trans  &kp LC(Z)           &kp LC(X)        &kp LC(C)  &kp LC(V)    &trans                           &kp LG(N)  &alt_space_lang2  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans      &trans
-                            &trans           &trans     &trans       &trans         &trans    &trans  &trans                       &trans
+&trans  &trans              &trans           &trans     &kp LG(TAB)  &trans                           &trans     &kp LC(N0)             &kp LC(MINUS)           &kp LC(EQUAL)            &kp DELETE  &trans
+&trans  &kp LA(LEFT_ARROW)  &kp LS(LC(TAB))  &trans     &trans       &kp LG(LS(S))                    &trans     &forcus_addresbar_win  &kp LS(LC(TAB))         &kp LC(TAB)              &kp LA(F4)  &trans
+&trans  &kp LC(Z)           &kp LC(X)        &kp LC(C)  &kp LC(V)    &trans                           &kp LG(N)  &alt_space_lang2       &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans      &trans
+                            &trans           &trans     &trans       &trans         &trans    &trans  &trans                            &trans
             >;
         };
-
-        // Layer: 7
 
         CONFIG {
             bindings = <
