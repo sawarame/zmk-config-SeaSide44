@@ -66,6 +66,18 @@
             layers = <DEFAULT_WIN>;
         };
 
+        left_gui_mac {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <14 15>;
+            layers = <DEFAULT_MAC>;
+        };
+
+        lefr_alt_win {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <14 15>;
+            layers = <DEFAULT_WIN>;
+        };
+
         left_config {
             bindings = <&mo CONFIG>;
             key-positions = <15 16>;
