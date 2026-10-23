@@ -187,18 +187,18 @@
 
         DEFAULT_MAC {
             bindings = <
-&trans  &kp Q         &kp W           &kp E           &kp R                        &kp T                                                                       &kp Y                   &kp U  &kp I                &kp O            &kp P                &trans
-&trans  &mt LCTRL A   &kp S           &kp D           &kp F                        &kp G                                                                       &kp H                   &kp J  &kp K                &lt MOUSE L      &mt RCTRL SEMICOLON  &trans
-&trans  &mt LSHIFT Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V                        &kp B                                                                       &kp N                   &kp M  &mt RIGHT_GUI COMMA  &mt RALT PERIOD  &mt RSHIFT SLASH     &trans
-                      &trans          &trans          &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mt RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_MAC ENTER         &mo CONFIG
+&trans  &kp Q  &kp W           &kp E           &kp R                        &kp T                                                                       &kp Y                   &kp U  &kp I                &kp O            &kp P                &trans
+&trans  &kp A  &kp S           &kp D           &kp F                        &kp G                                                                       &kp H                   &kp J  &kp K                &lt MOUSE L      &mt RCTRL SEMICOLON  &trans
+&trans  &kp Z  &mt LEFT_ALT X  &mt LEFT_GUI C  &kp V                        &kp B                                                                       &kp N                   &kp M  &mt RIGHT_GUI COMMA  &mt RALT PERIOD  &mt RSHIFT SLASH     &trans
+               &trans          &trans          &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mt RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_MAC ENTER         &mo CONFIG
             >;
         };
 
         DEFAULT_WIN {
             bindings = <
 &trans  &mt LEFT_WIN Q  &kp W           &kp E        &kp R                        &kp T                                                                       &kp Y                   &kp U  &kp I            &kp O            &mt RIGHT_WIN P      &trans
-&trans  &mt LCTRL A     &kp S           &kp D        &kp F                        &kp G                                                                       &kp H                   &kp J  &kp K            &lt MOUSE L      &mt RCTRL SEMICOLON  &trans
-&trans  &mt LSHIFT Z    &mt LEFT_ALT X  &mt LCTRL C  &kp V                        &kp B                                                                       &kp N                   &kp M  &mt RCTRL COMMA  &mt RALT PERIOD  &mt RSHIFT SLASH     &trans
+&trans  &kp A           &kp S           &kp D        &kp F                        &kp G                                                                       &kp H                   &kp J  &kp K            &lt MOUSE L      &mt RCTRL SEMICOLON  &trans
+&trans  &kp Z           &mt LEFT_ALT X  &mt LCTRL C  &kp V                        &kp B                                                                       &kp N                   &kp M  &mt RCTRL COMMA  &mt RALT PERIOD  &mt RSHIFT SLASH     &trans
                         &trans          &trans       &lt SCROLL_AND_FUNCTION TAB  &lt NUM_AND_SYMBOL SPACE  &mt_escape LSHIFT 0    &mt RIGHT_SHIFT BACKSPACE  &lt SHORTCUT_WIN ENTER         &mo CONFIG
             >;
         };
@@ -215,10 +215,10 @@
         //  コマンドキーやオプションキーと同時押しが必要なキーはここには書かない
         SCROLL_AND_FUNCTION {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3     &kp F4     &kp F5                    &kp F6              &kp F7              &kp F8            &kp F9                 &kp F10  &trans
-&trans  &kp F11  &kp F12  &kp LANG2  &kp LANG1  &trans                    &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &lt 2 RIGHT_ARROW      &trans   &trans
-&trans  &trans   &trans   &trans     &trans     &trans                    &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(UP_ARROW)  &lt 2 LS(RIGHT_ARROW)  &trans   &trans
-                 &trans   &trans     &trans     &trans  &trans    &trans  &trans                                  &trans
+&trans  &kp F1      &kp F2     &kp F3     &kp F4     &kp F5                    &kp F6              &kp F7              &kp F8            &kp F9                 &kp F10  &trans
+&trans  &kp F11     &kp F12    &kp LANG2  &kp LANG1  &trans                    &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &lt 2 RIGHT_ARROW      &trans   &trans
+&trans  &kp LSHIFT  &kp LCTRL  &trans     &trans     &trans                    &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(UP_ARROW)  &lt 2 LS(RIGHT_ARROW)  &trans   &trans
+                    &trans     &trans     &trans     &trans  &trans    &trans  &trans                                  &trans
             >;
         };
 
