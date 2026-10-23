@@ -64,7 +64,7 @@
         };
 
         right_alt_win {
-            bindings = <&mo RIGHT_ALT>;
+            bindings = <&kp RIGHT_ALT>;
             key-positions = <20 21>;
             layers = <DEFAULT_WIN>;
         };
