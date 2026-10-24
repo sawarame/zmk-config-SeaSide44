@@ -118,7 +118,7 @@
         forcus_addresbar_win: forcus_addresbar_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(L) &kp LANG2>;
+            bindings = <&kp LC(L) &kp LANG2 &kp N &kp M &kp SPACE>;
             label = "FORCUS_ADDRESBAR_WIN";
         };
 
@@ -126,7 +126,7 @@
         forcus_addresbar_mac: forcus_addresbar_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(L) &kp LANG2>;
+            bindings = <&kp LG(L) &kp LANG2 &kp N &kp M &kp SPACE>;
             label = "FORCUS_ADDRESBAR_MAC";
         };
 
@@ -217,10 +217,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB3  &trans    &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans
+&trans  &trans  &trans  &trans     &trans     &trans                    &trans  &trans    &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &kp LANG2  &kp LANG1  &trans                    &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans                    &trans  &mkp MB3  &trans    &trans  &trans  &trans
+                &trans  &trans     &trans     &trans  &trans    &trans  &trans            &trans
             >;
         };
 
