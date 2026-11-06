@@ -6,6 +6,7 @@
 #define DEFAULT_MAC 0
 #define DEFAULT_WIN 1
 #define MOUSE 2
+#define MOUSE_AND_FUNCTION 2
 #define SCROLL_AND_ARROW 3
 #define NUM_AND_SYMBOL 4
 #define SHORTCUT_MAC 5
@@ -219,7 +220,7 @@
             bindings = <
 &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                     &trans  &trans    &trans    &trans  &trans  &trans
 &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10                    &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans
-&trans  &kp F11  &kp $12  &trans  &trans  &trans                     &trans  &mkp MB3  &trans    &trans  &trans  &trans
+&trans  &kp F11  &kp F12  &trans  &trans  &trans                     &trans  &mkp MB3  &trans    &trans  &trans  &trans
                  &trans   &trans  &trans  &trans   &trans    &trans  &trans                              &trans
             >;
         };
